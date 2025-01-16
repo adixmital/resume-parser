@@ -16,7 +16,7 @@ const upload = multer({ dest: "uploads/" });
 
 app.post("/upload-resume", upload.single("resume"), (req, res) => {
     if (!req.file) {
-        return res.status(400).json({ error: "No file uploaded" });
+            return res.status(400).json({ error: "No file uploaded" });
     }
 
     // Invoke Python script
